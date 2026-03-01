@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aline Kamizi - Podologia, Estética e Bem-Estar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #556B2F; /* Verde oliva */
+            --secondary-color: #E8B4B8; /* Rosado forte */
+            --accent-color: #F5F5F5; /* Branco */
+            --text-color: #333;
+            --light-text: #666;
+            --white: #fff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --focus-outline: 3px solid #4A90E2;
+            --focus-offset: 2px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Foco visível para acessibilidade */
+        :focus {
+            outline: var(--focus-outline);
+            outline-offset: var(--focus-offset);
+        }
+
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        :focus-visible {
+            outline: var(--focus-outline);
+            outline-offset: var(--focus-offset);
+        }
+
+        /* Skip to content link */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 1001;
+            transition: top 0.3s;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #475A26;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #D9A2A7;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            animation: pulse 2s infinite;
+            transition: transform 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+
+        .btn-whatsapp:focus {
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 35px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .mobile-menu-btn:focus {
+            outline: var(--focus-outline);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(85, 107, 47, 0.1), rgba(85, 107, 47, 0.8)), url('img/imagem-hero.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 70px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Serviços */
+        .services {
+            background-color: var(--accent-color);
+        }
+
+        .service-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .category-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-header {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .category-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .category-card:hover .category-header img {
+            transform: scale(1.05);
+        }
+
+        .category-header h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(85, 107, 47, 0.85);
+            color: var(--white);
+            padding: 15px;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .service-list {
+            padding: 25px;
+        }
+
+        .service-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .service-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .service-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .service-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0;
+            font-size: 1.2rem;
+        }
+
+        .service-toggle {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-toggle:hover {
+            background-color: rgba(85, 107, 47, 0.1);
+        }
+
+        .service-toggle:focus {
+            outline: var(--focus-outline);
+        }
+
+        .service-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            margin-top: 0;
+        }
+
+        .service-details.active {
+            max-height: 1000px;
+            margin-top: 15px;
+        }
+
+        .service-details p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .service-benefits {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .service-benefits li {
+            color: var(--light-text);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .service-indications {
+            background-color: rgba(232, 180, 184, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .service-indications p {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        /* Depoimentos */
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .testimonial-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .testimonial-info .rating {
+            color: #FFC107;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-info .rating span {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--light-text);
+        }
+
+        /* Galeria */
+        .gallery {
+            background-color: var(--accent-color);
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            height: 250px;
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(85, 107, 47, 0.85);
+            color: var(--white);
+            padding: 10px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Sobre */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 500px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--light-text);
+        }
+
+        .values-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--accent-color);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(232, 180, 184, 0.1);
+        }
+
+        .value-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .value-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Contato */
+        .contact {
+            background-color: var(--accent-color);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .contact-info > p {
+            color: var(--light-text);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item i {
+            width: 70px;
+            height: 70px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--text-color);
+            font-size: 1.8rem;
+        }
+
+        .contact-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .contact-item p {
+            color: var(--light-text);
+            margin-bottom: 8px;
+        }
+
+        .schedule-item {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .schedule-item strong {
+            color: var(--primary-color);
+        }
+
+        .contact-cta {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .contact-cta .btn {
+            font-size: 1.2rem;
+            padding: 18px 40px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.3rem;
+        }
+
+        .social-links a:hover,
+        .social-links a:focus {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-column p, .footer-column a {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover,
+        .footer-column a:focus {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Mapa */
+        .map-container {
+            margin-top: 50px;
+        }
+
+        .map-container h3 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .map-container iframe {
+            border-radius: 10px;
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+
+        /* Attention text */
+        .attention-text {
+            background-color: rgba(232, 180, 184, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            color: var(--text-color);
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .about-content, .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 400px;
+                order: -1;
+            }
+            
+            .hero h1 {
+                font-size: 2.7rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 40px;
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 0 0 25px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+            
+            .contact-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .testimonials-container, .gallery-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 300px;
+            }
+            
+            .contact-item {
+                padding: 20px;
+            }
+            
+            .btn-whatsapp {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary-color: #000;
+                --secondary-color: #fff;
+                --text-color: #000;
+                --light-text: #000;
+                --white: #fff;
+                --accent-color: #f0f0f0;
+            }
+            
+            .btn, .btn-secondary, .btn-whatsapp {
+                border: 2px solid currentColor;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content link -->
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo principal</a>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5541997653498?text=Olá! Gostaria de agendar um horário." 
+       class="btn btn-whatsapp" 
+       target="_blank"
+       aria-label="Abrir WhatsApp para agendamento">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">WhatsApp</span>
+    </a>
+
+    <!-- Header -->
+    <header role="banner">
+        <div class="container header-container">
+            <a href="#inicio" class="logo" aria-label="Aline Kamizi - Página inicial">
+                Aline <span>Kamizi</span>
+            </a>
+            <button class="mobile-menu-btn" 
+                    id="mobileMenuBtn" 
+                    aria-label="Abrir menu de navegação" 
+                    aria-expanded="false"
+                    aria-controls="navLinks">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav role="navigation" aria-label="Menu principal">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#inicio" aria-current="page">Início</a></li>
+                    <li><a href="#servicos">Serviços e Benefícios</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio" aria-label="Seção inicial">
+            <div class="container">
+                <h1>Cuidado profissional para a saúde e beleza da cabeça aos pés</h1>
+                <p>Atendimento humanizado e especializado em podologia, estética e bem-estar em Piraquara.</p>
+                <a href="#contato" class="btn" aria-label="Agendar horário - role para seção de contato">Agendar Horário</a>
+            </div>
+        </section>
+
+        <!-- Serviços Section -->
+        <section class="services" id="servicos" aria-labelledby="servicos-title">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="servicos-title">Serviços e Benefícios</h2>
+                    <p>Conheça nossos tratamentos especializados para cuidar da sua saúde e beleza.</p>
+                </div>
+                
+                <div class="service-categories">
+                    <!-- Massoterapia -->
+                    <div class="category-card">
+                        <div class="category-header">
+                            <img src="img/massoterapia.png" alt="Massoterapia - banho de gel para relaxamento muscular">
+                            <h3>Massoterapia Terapêutica e Estética</h3>
+                        </div>
+                        <div class="service-list" role="list">
+                            <!-- Massagem Modeladora -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Massagem Modeladora</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="massagem-modeladora-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Massagem Modeladora</span>
+                                    </button>
+                                </div>
+                                <div id="massagem-modeladora-desc" class="service-details">
+                                    <p>A massagem modeladora é um tratamento corporal que utiliza manobras intensas, rápidas e profundas para auxiliar na redução de medidas, melhorar o contorno corporal e ativar a circulação sanguínea.</p>
+                                    <p>Ela ajuda a combater a gordura localizada, estimula o metabolismo e contribui para a melhora da textura da pele, deixando-a mais firme e uniforme.</p>
+                                    <ul class="service-benefits">
+                                        <li>Redução de medidas e gordura localizada</li>
+                                        <li>Melhora do contorno corporal</li>
+                                        <li>Ativação da circulação sanguínea</li>
+                                        <li>Estímulo do metabolismo</li>
+                                        <li>Melhora da textura e firmeza da pele</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Drenagem Linfática -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Drenagem Linfática</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="drenagem-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Drenagem Linfática</span>
+                                    </button>
+                                </div>
+                                <div id="drenagem-desc" class="service-details">
+                                    <p>A drenagem linfática é uma técnica de massagem suave e ritmada que estimula o sistema linfático, auxiliando na eliminação de líquidos retidos e toxinas do organismo.</p>
+                                    <p>Ela ajuda a reduzir inchaços, melhorar a circulação, aliviar a sensação de pernas cansadas e promover relaxamento profundo.</p>
+                                    <div class="service-indications">
+                                        <p><strong>Indicações:</strong> Pós-operatório, gestação (com liberação médica), retenção de líquidos, edemas ou cansaço corporal.</p>
+                                    </div>
+                                    <ul class="service-benefits">
+                                        <li>Eliminação de líquidos retidos e toxinas</li>
+                                        <li>Redução de inchaços e edemas</li>
+                                        <li>Melhora da circulação sanguínea</li>
+                                        <li>Alívio da sensação de pernas cansadas</li>
+                                        <li>Promove relaxamento profundo e bem-estar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Ventosa -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Ventosa</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="ventosa-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Ventosa</span>
+                                    </button>
+                                </div>
+                                <div id="ventosa-desc" class="service-details">
+                                    <p>A ventosaterapia utiliza ventosas para estimular a circulação sanguínea, aliviar tensões musculares e dores localizadas.</p>
+                                    <p>A técnica auxilia na liberação de toxinas, melhora da oxigenação dos tecidos e relaxamento muscular.</p>
+                                    <ul class="service-benefits">
+                                        <li>Estimulação da circulação sanguínea</li>
+                                        <li>Alívio de tensões e dores musculares</li>
+                                        <li>Liberação de toxinas acumuladas</li>
+                                        <li>Melhora da oxigenação dos tecidos</li>
+                                        <li>Promove relaxamento muscular profundo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Bambu Terapia -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Bambu Terapia</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="bambu-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Bambu Terapia</span>
+                                    </button>
+                                </div>
+                                <div id="bambu-desc" class="service-details">
+                                    <p>A bambu terapia é uma técnica de massagem que utiliza hastes de bambu para promover relaxamento, modelagem corporal e ativação da circulação.</p>
+                                    <p>Ela ajuda a reduzir tensões, melhorar o contorno corporal e proporcionar sensação de bem-estar.</p>
+                                    <ul class="service-benefits">
+                                        <li>Promove relaxamento profundo</li>
+                                        <li>Auxilia na modelagem corporal</li>
+                                        <li>Ativa a circulação sanguínea</li>
+                                        <li>Reduz tensões musculares</li>
+                                        <li>Proporciona sensação de bem-estar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Massagem Pós-Cirúrgica -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Massagem Pós-Cirúrgica</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="pos-cirurgica-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Massagem Pós-Cirúrgica</span>
+                                    </button>
+                                </div>
+                                <div id="pos-cirurgica-desc" class="service-details">
+                                    <p>A massagem pós-cirúrgica é indicada para auxiliar na recuperação após procedimentos cirúrgicos, respeitando sempre a liberação médica.</p>
+                                    <p>Ela ajuda a reduzir inchaços, prevenir fibroses, melhorar a circulação e acelerar o processo de recuperação, promovendo conforto e bem-estar.</p>
+                                    <div class="service-indications">
+                                        <p><strong>Importante:</strong> Respeitando sempre a liberação médica para iniciar o tratamento.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Massagem Relaxante -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Massagem Relaxante</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="relaxante-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Massagem Relaxante</span>
+                                    </button>
+                                </div>
+                                <div id="relaxante-desc" class="service-details">
+                                    <p>A massagem relaxante é uma técnica que utiliza movimentos suaves e contínuos para aliviar tensões musculares, reduzir o estresse e promover um profundo estado de relaxamento físico e mental.</p>
+                                    <p>Ela melhora a circulação sanguínea, diminui dores causadas pelo dia a dia e contribui para o equilíbrio do corpo e da mente.</p>
+                                    <div class="service-indications">
+                                        <p><strong>Ideal para:</strong> Quem busca momentos de cuidado, descanso e bem-estar. Ajuda a melhorar a qualidade do sono, reduzir a ansiedade e renovar as energias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Massagem Terapêutica -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Massagem Terapêutica</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="terapeutica-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Massagem Terapêutica</span>
+                                    </button>
+                                </div>
+                                <div id="terapeutica-desc" class="service-details">
+                                    <p>A massagem terapêutica é uma técnica voltada para o alívio de dores musculares, tensões e desconfortos físicos causados pelo estresse, má postura ou esforço repetitivo.</p>
+                                    <p>Por meio de manobras específicas e direcionadas, ela atua profundamente na musculatura, promovendo relaxamento, melhora da circulação e recuperação funcional do corpo.</p>
+                                    <div class="service-indications">
+                                        <p><strong>Indicações:</strong> Pessoas que sofrem com dores nas costas, pescoço, ombros, lombar ou fadiga muscular, contribuindo para o bem-estar, mobilidade e qualidade de vida.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Detox Corporal -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Detox Corporal</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="detox-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Detox Corporal</span>
+                                    </button>
+                                </div>
+                                <div id="detox-desc" class="service-details">
+                                    <p>O detox corporal é um tratamento que auxilia na eliminação de toxinas acumuladas no organismo, promovendo equilíbrio, leveza e bem-estar.</p>
+                                    <p>Por meio de técnicas específicas e ativos naturais, ele estimula a circulação, ativa o sistema linfático e contribui para a redução do inchaço e da retenção de líquidos.</p>
+                                    <ul class="service-benefits">
+                                        <li>Eliminação de toxinas acumuladas</li>
+                                        <li>Promove equilíbrio e leveza corporal</li>
+                                        <li>Estimula a circulação e sistema linfático</li>
+                                        <li>Reduz inchaço e retenção de líquidos</li>
+                                        <li>Melhora o funcionamento do corpo</li>
+                                        <li>Proporciona pele mais viçosa e renovação energética</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Estética Facial e Corporal -->
+                    <div class="category-card">
+                        <div class="category-header">
+                            <img src="img/estetica-facial.png" alt="Gel Terapia - procedimento estético facial">
+                            <h3>Estética Facial e Corporal</h3>
+                        </div>
+                        <div class="service-list" role="list">
+                            <!-- Remoção de Verrugas -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Remoção de Verrugas</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="verrugas-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Remoção de Verrugas</span>
+                                    </button>
+                                </div>
+                                <div id="verrugas-desc" class="service-details">
+                                    <p>A remoção de verrugas é realizada de forma segura, visando eliminar a lesão e aliviar desconfortos causados pelo atrito ou dor.</p>
+                                    <p>O procedimento ajuda a prevenir a disseminação da verruga e melhora a saúde e o conforto da pele, sempre respeitando a avaliação profissional.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Limpeza de Pele -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Limpeza de Pele</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="limpeza-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Limpeza de Pele</span>
+                                    </button>
+                                </div>
+                                <div id="limpeza-desc" class="service-details">
+                                    <p>A limpeza de pele é um tratamento facial essencial para remover impurezas, oleosidade excessiva, células mortas e cravos.</p>
+                                    <p>Ela promove a desobstrução dos poros, melhora a textura da pele e auxilia na prevenção de acne, deixando o rosto mais limpo, saudável e revitalizado.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Microagulhamento -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Microagulhamento</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="micro-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Microagulhamento</span>
+                                    </button>
+                                </div>
+                                <div id="micro-desc" class="service-details">
+                                    <p>O microagulhamento é um procedimento estético que utiliza microagulhas para estimular a produção natural de colágeno e elastina.</p>
+                                    <p>Ele auxilia na redução de manchas, linhas finas, cicatrizes de acne e melhora a textura e firmeza da pele, além de potencializar a absorção de ativos.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Peeling Químico -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Peeling Químico</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="peeling-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Peeling Químico</span>
+                                    </button>
+                                </div>
+                                <div id="peeling-desc" class="service-details">
+                                    <p>O peeling químico consiste na aplicação de ácidos específicos para promover a renovação celular da pele.</p>
+                                    <p>Ele ajuda a clarear manchas, controlar a oleosidade, suavizar linhas de expressão e melhorar o viço, proporcionando uma pele mais uniforme e renovada.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Hidragloss -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Hidragloss</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="hidragloss-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Hidragloss</span>
+                                    </button>
+                                </div>
+                                <div id="hidragloss-desc" class="service-details">
+                                    <p>O hidragloss é um tratamento labial que promove hidratação profunda, revitalização e realce da beleza natural dos lábios.</p>
+                                    <p>Ele melhora o aspecto de lábios ressecados, suaviza linhas finas e proporciona maciez, brilho e aparência saudável, sem procedimentos invasivos.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Depilação a Laser -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Depilação a Laser</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="laser-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Depilação a Laser</span>
+                                    </button>
+                                </div>
+                                <div id="laser-desc" class="service-details">
+                                    <p>A depilação a laser é um método moderno e eficaz para a redução progressiva dos pelos, atuando diretamente no folículo piloso.</p>
+                                    <p>O procedimento proporciona pele mais lisa, macia e com menos irritações, sendo indicado para diferentes tipos de pele e regiões do corpo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Podologia -->
+                    <div class="category-card">
+                        <div class="category-header">
+                            <img src="img/podologia.jpeg" alt="Podopediatria - cuidado especializado com pés de crianças">
+                            <h3>Podologia</h3>
+                        </div>
+                        <div class="service-list" role="list">
+                            <!-- Unha Encravada -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Unha Encravada</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="unha-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Tratamento de Unha Encravada</span>
+                                    </button>
+                                </div>
+                                <div id="unha-desc" class="service-details">
+                                    <p>O tratamento de unha encravada é realizado de forma segura e eficaz para aliviar a dor, inflamação e desconforto causados pelo crescimento incorreto da unha.</p>
+                                    <p>O procedimento promove o alívio imediato, previne infecções e orienta sobre os cuidados necessários para evitar recorrências.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Reflexologia Podal -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Reflexologia Podal</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="reflexo-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Reflexologia Podal</span>
+                                    </button>
+                                </div>
+                                <div id="reflexo-desc" class="service-details">
+                                    <p>A reflexologia podal é uma técnica terapêutica que estimula pontos específicos dos pés relacionados a diferentes órgãos e sistemas do corpo.</p>
+                                    <p>Ela promove relaxamento profundo, alívio do estresse, equilíbrio energético e bem-estar geral.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Podoprofilaxia -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Podoprofilaxia</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="profilaxia-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Podoprofilaxia</span>
+                                    </button>
+                                </div>
+                                <div id="profilaxia-desc" class="service-details">
+                                    <p>A podoprofilaxia é o cuidado preventivo dos pés, indicado para manter a saúde e a higiene podal.</p>
+                                    <p>O procedimento inclui corte técnico das unhas, remoção de excessos de cutículas, calosidades e limpeza geral, prevenindo problemas futuros e proporcionando conforto.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Calos e Calosidades -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Calos e Calosidades</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="calos-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Tratamento de Calos e Calosidades</span>
+                                    </button>
+                                </div>
+                                <div id="calos-desc" class="service-details">
+                                    <p>O tratamento de calos e calosidades visa remover o espessamento da pele causado por pressão ou atrito excessivo.</p>
+                                    <p>O procedimento alivia dores, melhora a pisada e devolve o conforto e a maciez aos pés, prevenindo o reaparecimento.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Podopediatria -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Podopediatria</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="podoped-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Podopediatria</span>
+                                    </button>
+                                </div>
+                                <div id="podoped-desc" class="service-details">
+                                    <p>A podopediatria é o cuidado especializado com os pés das crianças, realizado de forma delicada e segura.</p>
+                                    <p>O atendimento auxilia na prevenção e no tratamento de alterações nas unhas e na pele, garantindo o desenvolvimento saudável e confortável dos pés desde os primeiros anos.</p>
+                                    <div class="service-indications">
+                                        <p><strong>Indicado para crianças de 0 a 12 anos</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Podogeriatria -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Podogeriatria</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="podoger-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Podogeriatria</span>
+                                    </button>
+                                </div>
+                                <div id="podoger-desc" class="service-details">
+                                    <p>Atendimento especializado em idosos para cuidados com a saúde podal na terceira idade, considerando as necessidades específicas dessa fase da vida.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Fissuras -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Fissuras</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="fissuras-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Tratamento de Fissuras</span>
+                                    </button>
+                                </div>
+                                <div id="fissuras-desc" class="service-details">
+                                    <p>O tratamento de fissuras consiste no cuidado das rachaduras na pele dos pés, especialmente nos calcanhares.</p>
+                                    <p>Ele promove hidratação profunda, cicatrização e alívio da dor, prevenindo infecções e melhorando o aspecto da pele.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Nail Designer -->
+                    <div class="category-card">
+                        <div class="category-header">
+                            <img src="img/nail-designer.jpeg" alt="Nail Designer - unhas decoradas">
+                            <h3>Nail Designer</h3>
+                        </div>
+                        <div class="service-list" role="list">
+                            <!-- Blindagem em Gel -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Blindagem em Gel</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="blindagem-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Blindagem em Gel</span>
+                                    </button>
+                                </div>
+                                <div id="blindagem-desc" class="service-details">
+                                    <p>A blindagem em gel é um procedimento que fortalece as unhas naturais, criando uma camada protetora que aumenta a resistência e durabilidade.</p>
+                                    <p>Ideal para unhas frágeis ou quebradiças, proporciona brilho, proteção e aspecto saudável.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Soft Gel -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Soft Gel</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="soft-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Soft Gel</span>
+                                    </button>
+                                </div>
+                                <div id="soft-desc" class="service-details">
+                                    <p>O soft gel é uma técnica de alongamento de unhas com tips pré-moldadas em gel, oferecendo praticidade, leveza e acabamento natural.</p>
+                                    <p>Proporciona unhas resistentes, elegantes e com rápida aplicação.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Molde F1 -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Molde F1</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="molde-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Molde F1</span>
+                                    </button>
+                                </div>
+                                <div id="molde-desc" class="service-details">
+                                    <p>O molde F1 é uma técnica de alongamento que utiliza moldes para criar unhas sob medida, com formato e comprimento personalizados.</p>
+                                    <p>Oferece resistência, sofisticação e um resultado natural, adaptado ao estilo de cada cliente.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Manicure e Pedicure Tradicional -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>Manicure e Pedicure Tradicional</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="tradicional-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre Manicure e Pedicure Tradicional</span>
+                                    </button>
+                                </div>
+                                <div id="tradicional-desc" class="service-details">
+                                    <p>O serviço de manicure e pedicure tradicional cuida da saúde e beleza das mãos e pés, incluindo corte, lixamento, cuidado das cutículas e esmaltação.</p>
+                                    <p>Proporciona higiene, conforto e bem-estar no dia a dia.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- SPA dos Pés -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>SPA dos Pés</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="spa-pe-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre SPA dos Pés</span>
+                                    </button>
+                                </div>
+                                <div id="spa-pe-desc" class="service-details">
+                                    <p>O SPA dos pés é um tratamento relaxante e revitalizante que promove cuidado profundo e bem-estar.</p>
+                                    <p>Inclui higienização, esfoliação, hidratação intensa e massagem, aliviando o cansaço e deixando os pés macios e renovados.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- SPA das Mãos -->
+                            <div class="service-item" role="listitem">
+                                <div class="service-item-header">
+                                    <h4>SPA das Mãos</h4>
+                                    <button class="service-toggle" 
+                                            aria-expanded="false"
+                                            aria-controls="spa-mao-desc">
+                                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                        <span class="sr-only">Saiba mais sobre SPA das Mãos</span>
+                                    </button>
+                                </div>
+                                <div id="spa-mao-desc" class="service-details">
+                                    <p>O SPA das mãos é um tratamento completo que promove cuidado, relaxamento e revitalização da pele.</p>
+                                    <p>Inclui higienização, esfoliação, hidratação profunda e massagem relaxante, ajudando a combater o ressecamento e devolver maciez e suavidade às mãos.</p>
+                                    <div class="service-indications">
+                                        <p><strong>Ideal para:</strong> Quem busca mãos bem cuidadas, nutridas e com aparência saudável, proporcionando bem-estar e um momento especial de autocuidado.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <p class="attention-text">
+                        <strong>Atenção:</strong> Protocolos com ou sem equipamentos para estética corporal. Entre em contato e saiba qual o melhor protocolo para você!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos Section -->
+        <section id="depoimentos" aria-labelledby="depoimentos-title">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="depoimentos-title">Depoimentos</h2>
+                    <p>Veja o que nossos clientes dizem sobre nossos serviços.</p>
+                </div>
+                
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar" aria-hidden="true">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Maria Silva</h4>
+                                <div class="rating" aria-label="Avaliação: 5 estrelas">
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <span>5 de 5 estrelas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Atendimento excelente! A Aline é muito profissional e cuidadosa. Minhas unhas estavam muito encravadas e com dor, ela resolveu tudo com muita técnica e carinho. Recomendo muito!"</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar" aria-hidden="true">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Joana Santos</h4>
+                                <div class="rating" aria-label="Avaliação: 4.5 estrelas">
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                                    <span>4.5 de 5 estrelas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Fiz a massagem modeladora e estou amando os resultados! Já percebi redução de medidas e minha pele está muito mais firme. O ambiente é muito limpo e agradável. Voltarei com certeza!"</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar" aria-hidden="true">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Carla Mendes</h4>
+                                <div class="rating" aria-label="Avaliação: 5 estrelas">
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <span>5 de 5 estrelas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"O SPA dos pés é maravilhoso! Saí de lá renovada, com os pés macios e sem nenhum calo. A equipe é super atenciosa e o ambiente transmite paz. Já indiquei para todas minhas amigas!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria Section -->
+        <section class="gallery" id="galeria" aria-labelledby="galeria-title">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="galeria-title">Galeria</h2>
+                    <p>Conheça um pouco do nosso espaço e alguns de nossos serviços.</p>
+                </div>
+                
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="img/pes.png" alt="Antes e depois de tratamento de fissuras nos pés, mostrando a pele hidratada e saudável">
+                        <div class="caption">Tratamento de Fissuras</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/curiosidade-pes-diabeticos.jpeg" alt="Ilustração informativa sobre cuidados com pés diabéticos">
+                        <div class="caption">Curiosidade</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/gel-terapia-podo.jpeg" alt="Procedimento de gel terapia para trauma ungueal em andamento">
+                        <div class="caption">Trauma ungueal - Gel terapia</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/podped.png" alt="Atendimento de podopediatria com criança">
+                        <div class="caption">Prevenção e cuidado desde os primeiros passos</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/clinica.png" alt="Espaço acolhedor da clínica com maca e decoração relaxante">
+                        <div class="caption">Mais que uma sala, um espaço de acolhimento e bem estar</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/nail-designer.jpeg" alt="Mãos com unhas decoradas em estilo nail designer">
+                        <div class="caption">Nail Designer</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/gel.png" alt="Procedimento de banho de gel sendo aplicado nas unhas">
+                        <div class="caption">Banho de Gel</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section id="sobre" aria-labelledby="sobre-title">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="sobre-title">Sobre Nós</h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="img/sobre-nos.jpeg" alt="Espaço da clínica Aline Kamizi com ambiente acolhedor e profissionais preparados">
+                    </div>
+                    
+                    <div class="about-text">
+                        <h3>Aline Kamizi – Podologia, Estética e Bem-Estar</h3>
+                        <p>Localizada em Piraquara, a clínica Aline Kamizi – Podologia, Estética e Bem-Estar é um espaço dedicado à excelência no cuidado com a saúde, a beleza e a qualidade de vida. Atuamos com alto padrão de profissionalismo, rigor em higiene e atendimento humanizado, oferecendo uma experiência segura, acolhedora e personalizada.</p>
+                        <p>Sob a direção da podóloga Aline Kamizi, profissional com ampla experiência e constante aprimoramento, a clínica conta com uma equipe multidisciplinar altamente qualificada nas áreas de massoterapia, nail designer e estética facial e corporal. Essa integração de especialidades permite tratamentos completos, eficazes e alinhados às necessidades individuais de cada cliente.</p>
+                        <p>Cada atendimento é conduzido com técnica, ética e atenção aos detalhes, refletindo nosso compromisso com resultados, bem-estar e excelência em cada etapa do cuidado.</p>
+                        
+                        <div class="values-list">
+                            <div class="value-item">
+                                <i class="fas fa-bullseye" aria-hidden="true"></i>
+                                <h4>Missão</h4>
+                                <p>Promover saúde, beleza e bem-estar por meio de atendimentos especializados, unindo técnica, cuidado humanizado e excelência profissional.</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                                <h4>Visão</h4>
+                                <p>Ser referência em podologia, estética e bem-estar em Piraquara e região, reconhecida pela qualidade dos serviços e experiência diferenciada.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="values-list" style="margin-top: 50px;">
+                    <div class="value-item">
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
+                        <h4>Profissionalismo e Ética</h4>
+                        <p>Conduta ética em todos os atendimentos e procedimentos.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-award" aria-hidden="true"></i>
+                        <h4>Excelência e Qualidade</h4>
+                        <p>Compromisso com a alta qualidade em todos os serviços oferecidos.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <h4>Higiene e Segurança</h4>
+                        <p>Rigor nos protocolos de higiene e segurança para seu bem-estar.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <h4>Atendimento Humanizado</h4>
+                        <p>Cada cliente recebe atenção personalizada e acolhimento.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <h4>Compromisso com Resultados</h4>
+                        <p>Foco em entregar resultados satisfatórios para cada cliente.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
+                        <h4>Respeito e Bem-Estar</h4>
+                        <p>Valorizamos o respeito e promovemos o bem-estar integral do cliente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section class="contact" id="contato" aria-labelledby="contato-title">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="contato-title">Contato</h2>
+                    <p>Entre em contato para agendar seu horário ou tirar dúvidas.</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Entre em Contato Conosco</h3>
+                        <p>Estamos prontos para atendê-lo com excelência e cuidado. Agende seu horário através dos nossos canais de contato!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <h4>Endereço</h4>
+                                <p>Rua Pastor Adolfo Weidmann, 736</p>
+                                <p>Piraquara - PR</p>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                <h4>WhatsApp</h4>
+                                <p>(41) 99765-3498</p>
+                                <a href="https://wa.me/5541997653498?text=Olá! Gostaria de agendar um horário." 
+                                   class="btn" 
+                                   target="_blank" 
+                                   style="margin-top: 10px; padding: 10px 20px; font-size: 0.9rem;"
+                                   aria-label="Agendar horário pelo WhatsApp (abre em nova janela)">
+                                    Clique para AGENDAR AGORA!
+                                </a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <h4>E-mail</h4>
+                                <p>aline.kamiz@gmail.com</p>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                <h4>Horário de Funcionamento</h4>
+                                <div class="schedule-item">
+                                    <p><strong>Segunda a Sexta:</strong></p>
+                                    <p>10h às 21h</p>
+                                    <p><strong>Sábado:</strong></p>
+                                    <p>10h às 19h</p>
+                                    <p><em>Atendimento somente com horário agendado.</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Mapa -->
+                        <div class="map-container">
+                            <h3>Nossa Localização</h3>
+                            <div style="border-radius: 10px; overflow: hidden; box-shadow: var(--shadow);">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.186045184695!2d-49.06210502467408!3d-25.586737739366245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcf0a1f2f6899b%3A0xd38a86d3167c55ff!2sRua%20Pastor%20Adolfo%20Weidmann%2C%20736%20-%20Centro%2C%20Piraquara%20-%20PR%2C%2083305-070!5e0!3m2!1spt-BR!2sbr!4v1716841234567!5m2!1spt-BR!2sbr" 
+                                    width="100%" 
+                                    height="400" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Mapa mostrando a localização da clínica Aline Kamizi em Piraquara">
+                                </iframe>
+                            </div>
+                            
+                            <div style="text-align: center; margin-top: 20px;">
+                                <a href="https://www.google.com/maps/place/Rua+Pastor+Adolfo+Weidmann,+736+-+Centro,+Piraquara+-+PR,+83305-070" 
+                                   target="_blank" 
+                                   class="btn" 
+                                   style="background-color: var(--primary-color); color: white; padding: 12px 25px;"
+                                   aria-label="Abrir localização no Google Maps (abre em nova janela)">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Ver no Google Maps
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-cta">
+                            <a href="https://wa.me/5541997653498?text=Olá! Gostaria de agendar um horário." 
+                               class="btn" 
+                               target="_blank"
+                               aria-label="Agendar horário pelo WhatsApp (abre em nova janela)">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> AGENDAR PELO WHATSAPP
+                            </a>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/alinekamizipodologia" 
+                               target="_blank" 
+                               title="Instagram"
+                               aria-label="Visite nosso Instagram (abre em nova janela)">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.facebook.com/podologia.estetica.bemestar.alinekamizi" 
+                               target="_blank" 
+                               title="Facebook"
+                               aria-label="Visite nosso Facebook (abre em nova janela)">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Aline Kamizi</h3>
+                    <p>Podologia, Estética e Bem-Estar</p>
+                    <p>Atendimento humanizado e especializado em Piraquara.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Horário de Atendimento</h3>
+                    <p><strong>Segunda a Sexta:</strong> 10h às 21h</p>
+                    <p><strong>Sábado:</strong> 10h às 19h</p>
+                    <p><strong>Atendimento somente com horário agendado.</strong></p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <a href="#inicio">Início</a>
+                    <a href="#servicos">Serviços e Benefícios</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#galeria">Galeria</a>
+                    <a href="#sobre">Sobre Nós</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Aline Kamizi - Podologia, Estética e Bem-Estar. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Screen reader only class */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+    </style>
+
+    <script>
+        // Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('active');
+            
+            // Update icon and label
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times" aria-hidden="true"></i>' 
+                : '<i class="fas fa-bars" aria-hidden="true"></i>';
+            mobileMenuBtn.setAttribute('aria-label', 
+                navLinks.classList.contains('active') ? 'Fechar menu' : 'Abrir menu'
+            );
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+                mobileMenuBtn.setAttribute('aria-label', 'Abrir menu');
+            });
+        });
+        
+        // Sistema de expansão "Saiba Mais" para serviços
+        document.querySelectorAll('.service-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const serviceDetails = this.closest('.service-item').querySelector('.service-details');
+                const icon = this.querySelector('i');
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                
+                serviceDetails.classList.toggle('active');
+                this.setAttribute('aria-expanded', !isExpanded);
+                
+                if (serviceDetails.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Efeito de scroll suave para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL hash without jumping
+                    history.pushState(null, null, targetId);
+                }
+            });
+        });
+        
+        // Adicionar classe ativa ao menu conforme scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if(scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                }
+            });
+        });
+
+        // Fechar menu mobile quando redimensionar para desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+                mobileMenuBtn.setAttribute('aria-label', 'Abrir menu');
+            }
+        });
+
+        // Trap focus in mobile menu when open
+        navLinks.addEventListener('keydown', (e) => {
+            if (!navLinks.classList.contains('active')) return;
+            
+            const focusableElements = navLinks.querySelectorAll('a, button');
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+            
+            if (e.key === 'Tab') {
+                if (e.shiftKey && document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement.focus();
+                } else if (!e.shiftKey && document.activeElement === lastElement) {
+                    e.preventDefault();
+                    firstElement.focus();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
